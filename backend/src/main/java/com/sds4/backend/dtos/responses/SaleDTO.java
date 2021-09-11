@@ -1,11 +1,8 @@
-package com.sds4.backend.dtos.response;
+package com.sds4.backend.dtos.responses;
 
 import com.sds4.backend.models.entities.Sale;
-import com.sds4.backend.models.entities.Seller;
 import lombok.Data;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.time.LocalDate;
 

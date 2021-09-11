@@ -1,4 +1,4 @@
-package com.sds4.backend.dtos.response;
+package com.sds4.backend.dtos.responses;
 
 import com.sds4.backend.models.entities.Seller;
 import lombok.Data;

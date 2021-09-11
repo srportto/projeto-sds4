@@ -1,8 +1,8 @@
 package com.sds4.backend.services;
 
-import com.sds4.backend.dtos.response.SaleDTO;
-import com.sds4.backend.dtos.response.SaleSuccessDTO;
-import com.sds4.backend.dtos.response.SaleSumDTO;
+import com.sds4.backend.dtos.responses.SaleDTO;
+import com.sds4.backend.dtos.responses.SaleSuccessDTO;
+import com.sds4.backend.dtos.responses.SaleSumDTO;
 import com.sds4.backend.models.entities.Sale;
 import com.sds4.backend.repositories.SaleRepository;
 import lombok.AllArgsConstructor;

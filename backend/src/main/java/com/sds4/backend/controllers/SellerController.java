@@ -1,6 +1,6 @@
 package com.sds4.backend.controllers;
 
-import com.sds4.backend.dtos.response.SellerDTO;
+import com.sds4.backend.dtos.responses.SellerDTO;
 import com.sds4.backend.services.SellerService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;

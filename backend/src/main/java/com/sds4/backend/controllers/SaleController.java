@@ -1,8 +1,8 @@
 package com.sds4.backend.controllers;
 
-import com.sds4.backend.dtos.response.SaleDTO;
-import com.sds4.backend.dtos.response.SaleSuccessDTO;
-import com.sds4.backend.dtos.response.SaleSumDTO;
+import com.sds4.backend.dtos.responses.SaleDTO;
+import com.sds4.backend.dtos.responses.SaleSuccessDTO;
+import com.sds4.backend.dtos.responses.SaleSumDTO;
 import com.sds4.backend.services.SaleService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -18,7 +18,6 @@ import java.util.List;
 @RequestMapping(value = "/sales")
 @AllArgsConstructor
 public class SaleController {
-
     private final SaleService service;
 
     @GetMapping
@@ -38,5 +37,4 @@ public class SaleController {
         List<SaleSuccessDTO> resultado= service.listSuccessGroupedBySeller();
         return ResponseEntity.ok().body(resultado);
     }
-
 }
