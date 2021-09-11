@@ -7,15 +7,24 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @AllArgsConstructor
 public class SellerService {
     private final SellerRepository sellerRepository;
 
+    @Transactional(readOnly = true)
     public Page<SellerDTO> findAllPaged(Pageable pageable){
-        Page<Seller> sellersList = sellerRepository.findAll(pageable);
-        var result =  sellersList.map(seller -> new SellerDTO(seller));
+        Page<Seller> sellersPage = sellerRepository.findAll(pageable);
+        var result =  sellersPage.map(seller -> new SellerDTO(seller));
+        return result;
+    }
+
+    @Transactional(readOnly = true)
+    public Page<SellerDTO> searchByName(String name, Pageable pageable) {
+        Page<Seller> sellersPage = sellerRepository.findByNameContainingIgnoreCase(name, pageable);
+        var result =  sellersPage.map(seller -> new SellerDTO(seller));
         return result;
     }
 }
