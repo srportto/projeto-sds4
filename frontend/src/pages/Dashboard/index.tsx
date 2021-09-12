@@ -4,6 +4,8 @@ import DonutChart from "components/DonutChart";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
+//px = padding na horizontal 
+//py = padding na vertical 
 const Dashboard = () => {
   return (
     <>
