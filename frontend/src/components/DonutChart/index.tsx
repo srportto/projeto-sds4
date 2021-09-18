@@ -21,7 +21,7 @@ const DonutChart = () => {
 
         setChartData({ labels: mylabels, series: mySeries });
       });
-
+      
   }, []);
 
   const options = {
